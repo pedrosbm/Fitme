@@ -2,8 +2,8 @@ import { NavigationContainer } from "@react-navigation/native";
 
 import useAuth from "./hooks/useAuth";
 
-import AppStack from "./stacks/AppStack";
-import AuthStack from "./stacks/AuthStack";
+import AuthStack from "./navigation/AuthStack";
+import AppTabs from "./navigation/AppTabs";
 
 /**
  * Main stack
@@ -16,7 +16,7 @@ export default function Index() {
             <NavigationContainer>
                 {
                     isLoggedIn ?
-                        <AppStack /> : <AuthStack />
+                        <AppTabs /> : <AuthStack />
                 }
             </NavigationContainer>
         </>

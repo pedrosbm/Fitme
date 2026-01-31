@@ -1,4 +1,4 @@
-export function Welcome(){
+export default function Exercicio(){
     return(
         <>
         

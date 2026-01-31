@@ -1,7 +1,6 @@
-export function Welcome(){
+export default function Workout(){
     return(
         <>
-        
         </>
     )
 }

@@ -1,4 +1,5 @@
-export function Welcome(){
+export default function Treinos(){
+    
     return(
         <>
         
