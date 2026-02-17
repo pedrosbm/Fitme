@@ -1,0 +1,654 @@
+[
+  {
+    "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+    "nome": "Supino reto (barra)",
+    "imagem": "",
+    "musculo_principal": [
+      "Peitoral maior"
+    ],
+    "musculo_secundario": [
+      "Deltoide anterior",
+      "Tríceps"
+    ],
+    "descricao": "Exercício fundamental para o desenvolvimento do peitoral, realizado em um banco plano com uma barra.",
+    "tutorial": [
+      "Deite-se no banco com os pés firmes no chão.",
+      "Segure a barra com as mãos um pouco além da largura dos ombros.",
+      "Abaixe a barra controladamente até tocar o meio do peito.",
+      "Empurre a barra de volta à posição inicial, estendendo os cotovelos."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "b2c3d4e5-f6a7-8901-2345-67890abcdef1",
+    "nome": "Supino inclinado (halter)",
+    "imagem": "",
+    "musculo_principal": [
+      "Peitoral superior"
+    ],
+    "musculo_secundario": [
+      "Deltoide anterior",
+      "Tríceps"
+    ],
+    "descricao": "Variação do supino focada na porção superior do peitoral, utilizando halteres para maior amplitude.",
+    "tutorial": [
+      "Ajuste o banco para um ângulo de 30 a 45 graus.",
+      "Deite-se segurando um halter em cada mão na altura dos ombros.",
+      "Empurre os halteres para cima até que os braços estejam estendidos.",
+      "Abaixe os halteres de forma controlada até a posição inicial."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "c3d4e5f6-a7b8-9012-3456-7890abcdef12",
+    "nome": "Supino em máquina",
+    "imagem": "",
+    "musculo_principal": [
+      "Peitoral maior"
+    ],
+    "musculo_secundario": [
+      "Deltoide anterior",
+      "Tríceps"
+    ],
+    "descricao": "Exercício guiado para o peitoral que oferece maior estabilidade e segurança.",
+    "tutorial": [
+      "Ajuste o banco para que as manoplas fiquem na altura do meio do peito.",
+      "Sente-se com as costas totalmente apoiadas e segure as manoplas.",
+      "Empurre para frente até a extensão completa dos braços.",
+      "Retorne à posição inicial de maneira controlada."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "d4e5f6a7-b8c9-0123-4567-890abcdef123",
+    "nome": "Puxada frente (aberta / neutra)",
+    "imagem": "",
+    "musculo_principal": [
+      "Grande dorsal (Latíssimo do dorso)"
+    ],
+    "musculo_secundario": [
+      "Bíceps",
+      "Romboides",
+      "Trapézio"
+    ],
+    "descricao": "Exercício essencial para a largura das costas, realizado em uma polia alta.",
+    "tutorial": [
+      "Sente-se na máquina e ajuste o apoio dos joelhos.",
+      "Segure a barra com uma pegada aberta (ou neutra).",
+      "Puxe a barra para baixo em direção à parte superior do peito, inclinando o tronco levemente para trás.",
+      "Retorne a barra à posição inicial de forma controlada."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "e5f6a7b8-c9d0-1234-5678-90abcdef1234",
+    "nome": "Puxada frente supinada",
+    "imagem": "",
+    "musculo_principal": [
+      "Grande dorsal (Latíssimo do dorso)"
+    ],
+    "musculo_secundario": [
+      "Bíceps",
+      "Romboides"
+    ],
+    "descricao": "Variação da puxada com pegada invertida (supinada), que aumenta a ativação do bíceps.",
+    "tutorial": [
+      "Sente-se na máquina e ajuste o apoio dos joelhos.",
+      "Segure a barra com as palmas das mãos voltadas para você (pegada supinada), na largura dos ombros.",
+      "Puxe a barra para baixo até a parte superior do peito.",
+      "Retorne lentamente à posição inicial."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "f6a7b8c9-d0e1-2345-6789-0abcdef12345",
+    "nome": "Barra fixa (assistida)",
+    "imagem": "",
+    "musculo_principal": [
+      "Grande dorsal (Latíssimo do dorso)"
+    ],
+    "musculo_secundario": [
+      "Bíceps",
+      "Romboides",
+      "Trapézio"
+    ],
+    "descricao": "Exercício de peso corporal para as costas, com assistência para iniciantes.",
+    "tutorial": [
+      "Ajuste o nível de assistência da máquina (graviton).",
+      "Suba na plataforma e segure a barra com a pegada desejada.",
+      "Puxe seu corpo para cima até que o queixo passe da barra.",
+      "Desça de forma controlada até a extensão completa dos braços."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "a7b8c9d0-e1f2-3456-7890-1bcdef123456",
+    "nome": "Remada curvada",
+    "imagem": "",
+    "musculo_principal": [
+      "Grande dorsal (Latíssimo do dorso)"
+    ],
+    "musculo_secundario": [
+      "Romboides",
+      "Trapézio",
+      "Bíceps",
+      "Lombar"
+    ],
+    "descricao": "Exercício com peso livre para espessura das costas, que exige boa estabilização do core.",
+    "tutorial": [
+      "Incline o tronco para frente, mantendo a coluna reta.",
+      "Segure a barra com uma pegada pronada (ou supinada).",
+      "Puxe a barra em direção ao abdômen, contraindo os músculos das costas.",
+      "Abaixe a barra de forma controlada."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "b8c9d0e1-f2a3-4567-8901-cdef12345678",
+    "nome": "Remada baixa",
+    "imagem": "",
+    "musculo_principal": [
+      "Grande dorsal (Latíssimo do dorso)"
+    ],
+    "musculo_secundario": [
+      "Romboides",
+      "Trapézio",
+      "Bíceps"
+    ],
+    "descricao": "Exercício sentado em máquina a cabo, focado na porção média das costas.",
+    "tutorial": [
+      "Sente-se na máquina com os pés apoiados e os joelhos levemente flexionados.",
+      "Segure o puxador com a coluna reta.",
+      "Puxe o puxador em direção ao abdômen, mantendo os cotovelos próximos ao corpo.",
+      "Retorne à posição inicial de forma controlada."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "c9d0e1f2-a3b4-5678-9012-def123456789",
+    "nome": "Remada alta no cross",
+    "imagem": "",
+    "musculo_principal": [
+      "Deltoide lateral",
+      "Trapézio"
+    ],
+    "musculo_secundario": [
+      "Bíceps",
+      "Deltoide anterior"
+    ],
+    "descricao": "Exercício para ombros e trapézio realizado com a polia baixa de um crossover.",
+    "tutorial": [
+      "Fique em pé de frente para a polia baixa, segurando a barra.",
+      "Puxe a barra para cima em direção ao queixo, elevando os cotovelos.",
+      "Mantenha os cotovelos mais altos que as mãos.",
+      "Abaixe a barra de forma controlada."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "d0e1f2a3-b4c5-6789-0123-ef1234567890",
+    "nome": "Agachamento no Smith",
+    "imagem": "",
+    "musculo_principal": [
+      "Quadríceps",
+      "Glúteos"
+    ],
+    "musculo_secundario": [
+      "Isquiotibiais",
+      "Adutores"
+    ],
+    "descricao": "Variação do agachamento em uma máquina guiada, que oferece mais estabilidade.",
+    "tutorial": [
+      "Posicione a barra do Smith sobre os ombros.",
+      "Coloque os pés um pouco à frente da linha do corpo.",
+      "Agache até que as coxas fiquem paralelas ao chão, mantendo a coluna reta.",
+      "Empurre de volta à posição inicial."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "e1f2a3b4-c5d6-7890-1234-f12345678901",
+    "nome": "Leg press",
+    "imagem": "",
+    "musculo_principal": [
+      "Quadríceps",
+      "Glúteos"
+    ],
+    "musculo_secundario": [
+      "Isquiotibiais",
+      "Adutores"
+    ],
+    "descricao": "Exercício de pressão com as pernas em máquina, excelente para volume e força nos membros inferiores. [36]",
+    "tutorial": [
+      "Sente-se na máquina e posicione os pés na plataforma, na largura dos ombros. [25]",
+      "Destrave a plataforma e flexione os joelhos, trazendo o peso em sua direção. [13]",
+      "Empurre a plataforma de volta à posição inicial, sem travar os joelhos. [25]",
+      "Mantenha a lombar e os glúteos sempre em contato com o banco. [13]"
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "f2a3b4c5-d6e7-8901-2345-123456789012",
+    "nome": "Hack machine",
+    "imagem": "",
+    "musculo_principal": [
+      "Quadríceps"
+    ],
+    "musculo_secundario": [
+      "Glúteos",
+      "Isquiotibiais",
+      "Adutores"
+    ],
+    "descricao": "Máquina de agachamento que guia o movimento, focando intensamente no quadríceps. [3, 41]",
+    "tutorial": [
+      "Posicione-se na máquina com os ombros sob os apoios e as costas no encosto. [34]",
+      "Coloque os pés na plataforma, na largura dos ombros. [34]",
+      "Agache flexionando os joelhos, mantendo a coluna apoiada. [34]",
+      "Empurre a plataforma para cima até a posição inicial."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "a3b4c5d6-e7f8-9012-3456-234567890123",
+    "nome": "Levantamento terra (tradicional)",
+    "imagem": "",
+    "musculo_principal": [
+      "Isquiotibiais",
+      "Glúteos",
+      "Lombar"
+    ],
+    "musculo_secundario": [
+      "Quadríceps",
+      "Trapézio",
+      "Grande dorsal"
+    ],
+    "descricao": "Exercício composto que trabalha quase todo o corpo, fundamental para força geral.",
+    "tutorial": [
+      "Posicione-se com os pés sob a barra, na largura do quadril.",
+      "Agache e segure a barra com as mãos por fora dos joelhos.",
+      "Levante a barra mantendo as costas retas, estendendo quadris e joelhos simultaneamente.",
+      "Abaixe a barra de forma controlada, revertendo o movimento."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "b4c5d6e7-f8a9-0123-4567-345678901234",
+    "nome": "Desenvolvimento (halter)",
+    "imagem": "",
+    "musculo_principal": [
+      "Deltoide anterior"
+    ],
+    "musculo_secundario": [
+      "Deltoide lateral",
+      "Tríceps",
+      "Trapézio"
+    ],
+    "descricao": "Exercício para ombros realizado com halteres, permitindo um movimento mais natural.",
+    "tutorial": [
+      "Sente-se em um banco com apoio para as costas, segurando um halter em cada mão na altura dos ombros.",
+      "Empurre os halteres para cima até a extensão quase completa dos braços.",
+      "Abaixe os halteres de forma controlada até a posição inicial.",
+      "Mantenha o abdômen contraído para estabilizar a coluna."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "c5d6e7f8-a9b0-1234-5678-456789012345",
+    "nome": "Desenvolvimento em máquina",
+    "imagem": "",
+    "musculo_principal": [
+      "Deltoide anterior"
+    ],
+    "musculo_secundario": [
+      "Deltoide lateral",
+      "Tríceps"
+    ],
+    "descricao": "Variação do desenvolvimento em máquina, que oferece um movimento guiado e seguro.",
+    "tutorial": [
+      "Ajuste o banco para que as manoplas fiquem na altura dos ombros.",
+      "Sente-se com as costas apoiadas e segure as manoplas.",
+      "Empurre para cima até a extensão dos braços.",
+      "Retorne à posição inicial de forma controlada."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "d6e7f8a9-b0c1-2345-6789-567890123456",
+    "nome": "Crucifixo máquina",
+    "imagem": "",
+    "musculo_principal": [
+      "Peitoral maior"
+    ],
+    "musculo_secundario": [
+      "Deltoide anterior"
+    ],
+    "descricao": "Exercício de isolamento para o peitoral, também conhecido como Peck Deck.",
+    "tutorial": [
+      "Sente-se na máquina com as costas apoiadas.",
+      "Posicione os antebraços nos apoios ou segure as manoplas.",
+      "Force os braços para se encontrarem na frente do corpo, contraindo o peitoral.",
+      "Retorne à posição inicial de forma controlada, alongando o peitoral."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "e7f8a9b0-c1d2-3456-7890-678901234567",
+    "nome": "Elevação lateral",
+    "imagem": "",
+    "musculo_principal": [
+      "Deltoide lateral"
+    ],
+    "musculo_secundario": [
+      "Deltoide anterior",
+      "Trapézio"
+    ],
+    "descricao": "Exercício de isolamento para a porção lateral dos ombros, criando uma aparência mais larga.",
+    "tutorial": [
+      "Fique em pé, segurando um halter em cada mão ao lado do corpo.",
+      "Eleve os braços para os lados até a altura dos ombros, com os cotovelos levemente flexionados.",
+      "Mantenha o core firme para evitar balanços.",
+      "Abaixe os halteres de forma controlada."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "f8a9b0c1-d2e3-4567-8901-789012345678",
+    "nome": "Elevação frontal",
+    "imagem": "",
+    "musculo_principal": [
+      "Deltoide anterior"
+    ],
+    "musculo_secundario": [
+      "Peitoral superior",
+      "Deltoide lateral"
+    ],
+    "descricao": "Exercício para a parte da frente dos ombros, geralmente feito com halteres ou barra.",
+    "tutorial": [
+      "Fique em pé, segurando halteres (ou uma barra) na frente das coxas.",
+      "Eleve os pesos para frente e para cima, até a altura dos ombros.",
+      "Mantenha os braços estendidos ou com uma leve flexão no cotovelo.",
+      "Abaixe os pesos de forma controlada."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "a9b0c1d2-e3f4-5678-9012-890123456789",
+    "nome": "Rosca direta (barra)",
+    "imagem": "",
+    "musculo_principal": [
+      "Bíceps braquial"
+    ],
+    "musculo_secundario": [
+      "Braquial",
+      "Braquiorradial"
+    ],
+    "descricao": "Exercício clássico para o desenvolvimento do bíceps, realizado com uma barra reta ou W.",
+    "tutorial": [
+      "Fique em pé, segurando a barra com as palmas das mãos para cima (pegada supinada).",
+      "Mantenha os cotovelos fixos ao lado do corpo.",
+      "Flexione os cotovelos, elevando a barra em direção aos ombros.",
+      "Abaixe a barra de forma controlada até a extensão completa dos braços."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "b0c1d2e3-f4a5-6789-0123-901234567890",
+    "nome": "Rosca alternada",
+    "imagem": "",
+    "musculo_principal": [
+      "Bíceps braquial"
+    ],
+    "musculo_secundario": [
+      "Braquial",
+      "Braquiorradial"
+    ],
+    "descricao": "Variação da rosca com halteres, trabalhando um braço de cada vez.",
+    "tutorial": [
+      "Fique em pé ou sentado, segurando um halter em cada mão com pegada supinada.",
+      "Flexione um cotovelo, elevando o halter em direção ao ombro.",
+      "Abaixe o halter de forma controlada.",
+      "Repita o movimento com o outro braço."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "c1d2e3f4-a5b6-7890-1234-012345678901",
+    "nome": "Rosca scott",
+    "imagem": "",
+    "musculo_principal": [
+      "Bíceps braquial"
+    ],
+    "musculo_secundario": [
+      "Braquial"
+    ],
+    "descricao": "Exercício de isolamento para o bíceps que utiliza um banco para apoiar os braços, minimizando o balanço. [4, 7]",
+    "tutorial": [
+      "Sente-se no banco Scott e ajuste a altura para que as axilas fiquem apoiadas. [4]",
+      "Segure a barra ou halteres com pegada supinada. [6]",
+      "Flexione os cotovelos, trazendo o peso para cima até a contração máxima do bíceps. [6]",
+      "Estenda os cotovelos de forma controlada, retornando à posição inicial. [6]"
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "d2e3f4a5-b6c7-8901-2345-123456789012",
+    "nome": "Tríceps testa",
+    "imagem": "",
+    "musculo_principal": [
+      "Tríceps braquial"
+    ],
+    "musculo_secundario": [],
+    "descricao": "Exercício deitado para tríceps, focado em todas as cabeças do músculo.",
+    "tutorial": [
+      "Deite-se em um banco plano, segurando uma barra (ou halteres) acima do peito.",
+      "Flexione os cotovelos, abaixando o peso em direção à testa.",
+      "Mantenha os braços (úmeros) imóveis e perpendiculares ao chão.",
+      "Empurre o peso de volta à posição inicial, estendendo os cotovelos."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "e3f4a5b6-c7d8-9012-3456-234567890123",
+    "nome": "Tríceps barra no cross",
+    "imagem": "",
+    "musculo_principal": [
+      "Tríceps braquial"
+    ],
+    "musculo_secundario": [],
+    "descricao": "Exercício de isolamento para tríceps na polia alta, ótimo para a cabeça lateral do músculo. [8]",
+    "tutorial": [
+      "Fique em pé de frente para a polia alta, segurando a barra com pegada pronada. [8]",
+      "Mantenha os cotovelos fixos ao lado do corpo. [8]",
+      "Empurre a barra para baixo até a extensão completa dos braços. [8]",
+      "Retorne à posição inicial de forma controlada."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "f4a5b6c7-d8e9-0123-4567-345678901234",
+    "nome": "Tríceps maquina",
+    "imagem": "",
+    "musculo_principal": [
+      "Tríceps braquial"
+    ],
+    "musculo_secundario": [],
+    "descricao": "Exercício guiado para tríceps, que permite focar na contração do músculo com estabilidade.",
+    "tutorial": [
+      "Sente-se na máquina e ajuste o banco.",
+      "Segure as manoplas com as palmas para baixo ou em posição neutra.",
+      "Empurre para baixo até que os braços estejam totalmente estendidos.",
+      "Retorne lentamente à posição inicial."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "a5b6c7d8-e9f0-1234-5678-456789012345",
+    "nome": "Legpress horizontal",
+    "imagem": "",
+    "musculo_principal": [
+      "Quadríceps"
+    ],
+    "musculo_secundario": [
+      "Glúteos",
+      "Isquiotibiais"
+    ],
+    "descricao": "Variação do leg press realizada em uma máquina horizontal, com foco em quadríceps e glúteos. [1, 38]",
+    "tutorial": [
+      "Sente-se na máquina com as costas totalmente apoiadas. [2]",
+      "Posicione os pés na plataforma, na largura dos ombros. [2]",
+      "Empurre a plataforma para frente até estender as pernas, sem travar os joelhos. [16]",
+      "Retorne de forma controlada, flexionando os joelhos. [16]"
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "b6c7d8e9-f0a1-2345-6789-567890123456",
+    "nome": "Cadeira extensora",
+    "imagem": "",
+    "musculo_principal": [
+      "Quadríceps"
+    ],
+    "musculo_secundario": [],
+    "descricao": "Exercício de isolamento para o quadríceps, que promove definição na parte frontal da coxa.",
+    "tutorial": [
+      "Sente-se na máquina e ajuste o apoio para que fique sobre a parte inferior das canelas.",
+      "Segure os apoios laterais para estabilidade.",
+      "Estenda os joelhos, elevando o peso até a extensão completa.",
+      "Abaixe o peso de forma controlada."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "c7d8e9f0-a1b2-3456-7890-678901234567",
+    "nome": "Cadeira flexora",
+    "imagem": "",
+    "musculo_principal": [
+      "Isquiotibiais"
+    ],
+    "musculo_secundario": [
+      "Panturrilha"
+    ],
+    "descricao": "Exercício de isolamento para os músculos posteriores da coxa, realizado sentado.",
+    "tutorial": [
+      "Sente-se na máquina e ajuste o apoio de pernas sobre os tornozelos.",
+      "Ajuste a trava sobre as coxas para firmar o corpo.",
+      "Flexione os joelhos, puxando o apoio para baixo e para trás.",
+      "Retorne à posição inicial de forma controlada."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "d8e9f0a1-b2c3-4567-8901-789012345678",
+    "nome": "Mesa flexora",
+    "imagem": "",
+    "musculo_principal": [
+      "Isquiotibiais"
+    ],
+    "musculo_secundario": [
+      "Panturrilha",
+      "Glúteos"
+    ],
+    "descricao": "Exercício deitado para isolar os músculos posteriores da coxa (isquiotibiais). [5, 39, 40]",
+    "tutorial": [
+      "Deite-se de bruços na máquina, com os joelhos logo para fora da borda do banco. [14]",
+      "Posicione o rolo de apoio na parte de trás dos tornozelos. [10]",
+      "Flexione os joelhos, puxando os calcanhares em direção aos glúteos. [5]",
+      "Retorne à posição inicial de forma controlada. [14]"
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "e9f0a1b2-c3d4-5678-9012-890123456789",
+    "nome": "Panturrilha sentado",
+    "imagem": "",
+    "musculo_principal": [
+      "Sóleo"
+    ],
+    "musculo_secundario": [
+      "Gastrocnêmio"
+    ],
+    "descricao": "Exercício específico para o músculo sóleo (parte profunda da panturrilha), realizado sentado.",
+    "tutorial": [
+      "Sente-se na máquina e posicione a parte anterior dos pés na plataforma.",
+      "Coloque o apoio sobre os joelhos.",
+      "Eleve os calcanhares o máximo possível, contraindo a panturrilha.",
+      "Abaixe os calcanhares de forma controlada, alongando o músculo."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "f0a1b2c3-d4e5-6789-0123-901234567890",
+    "nome": "Cadeira Adutora",
+    "imagem": "",
+    "musculo_principal": [
+      "Adutores da coxa"
+    ],
+    "musculo_secundario": [],
+    "descricao": "Exercício de isolamento para a parte interna das coxas.",
+    "tutorial": [
+      "Sente-se na máquina com as costas apoiadas.",
+      "Posicione a parte interna dos joelhos contra os apoios.",
+      "Force as pernas para se fecharem, contraindo os músculos adutores.",
+      "Retorne à posição inicial de forma controlada."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "a1b2c3d4-e5f6-7890-1234-a23456789012",
+    "nome": "Cadeira Abdutora",
+    "imagem": "",
+    "musculo_principal": [
+      "Glúteo médio",
+      "Glúteo mínimo"
+    ],
+    "musculo_secundario": [],
+    "descricao": "Exercício de isolamento para a parte lateral dos glúteos e coxas.",
+    "tutorial": [
+      "Sente-se na máquina com as costas apoiadas.",
+      "Posicione a parte externa dos joelhos contra os apoios.",
+      "Force as pernas para se abrirem, contraindo os glúteos.",
+      "Retorne à posição inicial de forma controlada."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "b2c3d4e5-f6a7-8901-2345-b34567890123",
+    "nome": "Abdominal máquina",
+    "imagem": "",
+    "musculo_principal": [
+      "Reto abdominal"
+    ],
+    "musculo_secundario": [
+      "Oblíquos"
+    ],
+    "descricao": "Exercício para o abdômen realizado em máquina, que permite adicionar carga de forma segura.",
+    "tutorial": [
+      "Sente-se na máquina e ajuste o apoio do peito ou das costas.",
+      "Segure as manoplas ou posicione os braços no apoio.",
+      "Flexione o tronco para frente, contraindo o abdômen.",
+      "Retorne à posição inicial de forma controlada."
+    ],
+    "exemplos": []
+  },
+  {
+    "id": "c3d4e5f6-a7b8-9012-3456-c45678901234",
+    "nome": "Prancha",
+    "imagem": "",
+    "musculo_principal": [
+      "Core (Reto abdominal, Transverso)"
+    ],
+    "musculo_secundario": [
+      "Lombar",
+      "Glúteos",
+      "Ombros"
+    ],
+    "descricao": "Exercício isométrico fundamental para o fortalecimento do core e estabilização da coluna.",
+    "tutorial": [
+      "Apoie os antebraços e as pontas dos pés no chão.",
+      "Mantenha o corpo reto como uma prancha, da cabeça aos calcanhares.",
+      "Contraia o abdômen e os glúteos para evitar que o quadril caia.",
+      "Sustente a posição pelo tempo determinado."
+    ],
+    "exemplos": []
+  }
+]

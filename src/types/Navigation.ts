@@ -1,29 +1,44 @@
+import { NavigationProp } from "@react-navigation/native"
+
 type AuthStack = {
     Welcome: undefined,
     Login: undefined,
     Register: undefined
 }
 
-type HomeStack = {
+type AuthStackNavigationProp = NavigationProp<AuthStack>
+
+type MainStack = {
     Home: undefined,
-    Workout: undefined,
-    Exercicio: { id: number }
+    Workout: { id: string },
+    Exercicio: { id: string }
 }
+
+type MainStackNavigationProp = NavigationProp<MainStack>
 
 type TreinoStack = {
     Treinos: undefined,
-    Treino: { id: number },
-    Exercicio: { id: number },
+    Treino: { id: string },
+    EditarExercicio: { id: string },
     NovoExercicio: undefined
 }
 
+type TreinoStackNavigationProp = NavigationProp<TreinoStack>
+
 type PerfilStack = {
-    Perfil: undefined
+    Perfil: undefined,
+    Detalhes: undefined
 }
+
+type PerfilStackNavigationProp = NavigationProp<PerfilStack>
 
 export {
     AuthStack,
-    HomeStack,
+    AuthStackNavigationProp,
+    MainStack,
+    MainStackNavigationProp,
     TreinoStack,
-    PerfilStack
+    TreinoStackNavigationProp,
+    PerfilStack,
+    PerfilStackNavigationProp
 }

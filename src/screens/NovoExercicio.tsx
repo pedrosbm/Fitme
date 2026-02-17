@@ -1,11 +1,11 @@
-import { useNavigation } from "@react-navigation/native"
-import { MainStackNavigationProp } from "../types/Navigation"
-import { SafeAreaView } from "react-native-safe-area-context"
-import { TouchableOpacity, View, Text } from "react-native"
-import { exercicio } from "../types/entities"
-import { useState } from "react"
+import { useEffect, useState } from "react";
+import { Text, TouchableOpacity, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { exercicio } from "../types/entities";
+import { useNavigation } from "@react-navigation/native";
+import { TreinoStackNavigationProp } from "../types/Navigation";
 
-export default function Workout() {
+export default function NovoExercicio() {
     const [exercicios, setExercicios] = useState<exercicio[]>([{
         "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
         "nome": "Supino reto (barra)",
@@ -27,21 +27,20 @@ export default function Workout() {
         "exemplos": []
     }])
 
-    // preact?
-    const navigation = useNavigation<MainStackNavigationProp>()
+    const navigation = useNavigation<TreinoStackNavigationProp>()
 
     return (
         <SafeAreaView>
-            {/* TODO lista de exercicios */}
             <View>
                 {exercicios.map((i) => (
                     <TouchableOpacity
                         key={i.id}
-                        onPress={() => navigation.navigate("Exercicio", { id: i.id })}
+                        onPress={() => alert("adicionado")}
                     >
                         <View >
                             <Text>{i.nome}</Text>
-                            <Text>{i.descricao}</Text>
+                            {i.musculo_principal.map(musculo => (<Text key={musculo}>{musculo}</Text>))}
+                            {i.musculo_secundario.map(musculo => (<Text key={musculo}>{musculo}</Text>))}
                         </View>
                     </TouchableOpacity>
                 ))}

@@ -1,10 +1,10 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { HomeStack as Stack } from "../types/Navigation"
+import { MainStack as Stack } from "../types/Navigation"
 import Home from "../screens/Home"
 import Workout from "../screens/Workout"
 import Exercicio from "../screens/Exercicio"
 
-export default function HomeStack() {
+export default function MainStack() {
     const Stack = createNativeStackNavigator<Stack>()
 
     return (

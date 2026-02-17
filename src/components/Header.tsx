@@ -21,8 +21,8 @@ export default function Header({ navigation, options, back, actions }: HeaderPro
             {back && <Appbar.BackAction onPress={navigation.goBack} />}
 
             <Appbar.Content title={options.title} />
-            
-            { <Appbar.Action icon={"menu"}/>}
+
+            {<Appbar.Action icon={"menu"} />}
 
             {actions.forEach(action => (
                 <Appbar.Action

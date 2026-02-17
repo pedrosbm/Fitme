@@ -4,16 +4,19 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 
 import Index from "./src/Index";
+import { WorkoutProvider } from "./src/context/WorkoutContext";
 
 export default function App() {
     return (
         <>
             <AuthProvider>
                 <PaperProvider>
-                    <SafeAreaProvider>
-                        <StatusBar style="auto" />
-                        <Index />
-                    </SafeAreaProvider>
+                    <WorkoutProvider>
+                        <SafeAreaProvider>
+                            <StatusBar style="auto" />
+                            <Index />
+                        </SafeAreaProvider>
+                    </WorkoutProvider>
                 </PaperProvider>
             </AuthProvider>
         </>
