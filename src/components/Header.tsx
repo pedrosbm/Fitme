@@ -3,8 +3,8 @@ import { Appbar } from "react-native-paper";
 type HeaderProps = {
     navigation: any,
     options: any,
-    back: any,
-    actions: Action[]
+    back?: any,
+    actions?: Action[]
 }
 
 type Action = {
@@ -24,7 +24,7 @@ export default function Header({ navigation, options, back, actions }: HeaderPro
 
             {<Appbar.Action icon={"menu"} />}
 
-            {actions.forEach(action => (
+            {actions?.forEach(action => (
                 <Appbar.Action
                     icon={action.icon}
                     onPress={action.onPress}

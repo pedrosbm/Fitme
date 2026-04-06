@@ -1,50 +1,55 @@
 import { useEffect, useState } from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { exercicio } from "../types/entities";
-import { useNavigation } from "@react-navigation/native";
-import { TreinoStackNavigationProp } from "../types/Navigation";
+import { exercicio, exercicio_treino } from "../types/entities";
+import { TreinoStack } from "../types/Navigation";
+import { supabase } from "../supabase";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
-export default function NovoExercicio() {
-    const [exercicios, setExercicios] = useState<exercicio[]>([{
-        "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
-        "nome": "Supino reto (barra)",
-        "imagem": "",
-        "musculo_principal": [
-            "Peitoral maior"
-        ],
-        "musculo_secundario": [
-            "Deltoide anterior",
-            "Tríceps"
-        ],
-        "descricao": "Exercício fundamental para o desenvolvimento do peitoral, realizado em um banco plano com uma barra.",
-        "tutorial": [
-            "Deite-se no banco com os pés firmes no chão.",
-            "Segure a barra com as mãos um pouco além da largura dos ombros.",
-            "Abaixe a barra controladamente até tocar o meio do peito.",
-            "Empurre a barra de volta à posição inicial, estendendo os cotovelos."
-        ],
-        "exemplos": []
-    }])
+type Props = NativeStackScreenProps<TreinoStack, "NovoExercicio">
 
-    const navigation = useNavigation<TreinoStackNavigationProp>()
+export default function NovoExercicio({ navigation, route }: Props) {
+    const { id } = route.params
+
+    // Exercicio selecionado
+    const [exercicio, setExercicio] = useState<exercicio_treino>()
+
+    // Exercicios do sistema
+    const [exercicios, setExercicios] = useState<exercicio[]>()
+
+    // Query de exercicios do sistema
+    useEffect(() => {
+        const fetch = async () => {
+            const { data } = await supabase.from("exercicio").select()
+
+            if (data != null) {
+                setExercicios(data)
+            }
+        }
+        fetch()
+    }, [])
+
+    const add = (item: exercicio) => {
+        const { id: idExercicio } = item
+
+    }   
 
     return (
         <SafeAreaView>
-            <View>
-                {exercicios.map((i) => (
-                    <TouchableOpacity
-                        key={i.id}
-                        onPress={() => alert("adicionado")}
-                    >
-                        <View >
-                            <Text>{i.nome}</Text>
-                            {i.musculo_principal.map(musculo => (<Text key={musculo}>{musculo}</Text>))}
-                            {i.musculo_secundario.map(musculo => (<Text key={musculo}>{musculo}</Text>))}
+            <FlatList data={exercicios} renderItem={({ item }) => (
+                <TouchableOpacity
+                    key={item.id}
+                    onPress={() => adicionar(item)}
+                >
+                    <View style={{ flexDirection: "row", justifyContent: "space-between", margin: 10, padding: 10, backgroundColor: "red" }}>
+                        <Text>{item.nome}</Text>
+                        <View>
+                            {item.musculo_principal.map(musculo => (<Text key={musculo}>{musculo}</Text>))}
+                            {item.musculo_secundario.map(musculo => (<Text key={musculo}>{musculo}</Text>))}
                         </View>
-                    </TouchableOpacity>
-                ))}
-            </View>
+                    </View>
+                </TouchableOpacity>
+            )} />
         </SafeAreaView>
     )
 }

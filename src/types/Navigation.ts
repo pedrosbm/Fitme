@@ -20,7 +20,7 @@ type TreinoStack = {
     Treinos: undefined,
     Treino: { id: string },
     EditarExercicio: { id: string },
-    NovoExercicio: undefined
+    NovoExercicio: { id: string }
 }
 
 type TreinoStackNavigationProp = NavigationProp<TreinoStack>

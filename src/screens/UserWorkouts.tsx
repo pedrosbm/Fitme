@@ -5,7 +5,7 @@ import { useNavigation } from "@react-navigation/native"
 import { TreinoStackNavigationProp } from "../types/Navigation"
 import { useState } from "react"
 
-export default function Treinos() {
+export default function UserWorkouts() {
     const { treinos } = useWorkout()
     const [visible, setVisible] = useState<boolean>(false)
 

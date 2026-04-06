@@ -1,51 +1,57 @@
-import { useNavigation } from "@react-navigation/native"
-import { MainStackNavigationProp } from "../types/Navigation"
-import { SafeAreaView } from "react-native-safe-area-context"
-import { TouchableOpacity, View, Text } from "react-native"
-import { exercicio } from "../types/entities"
-import { useState } from "react"
+import { Button, FlatList, Text, TouchableOpacity, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { TreinoStack } from "../types/Navigation";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { useWorkout } from "../hooks/useWorkout";
+import { useEffect, useState } from "react";
+import { exercicio_treino, treino } from "../types/entities";
 
-export default function Workout() {
-    const [exercicios, setExercicios] = useState<exercicio[]>([{
-        "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
-        "nome": "Supino reto (barra)",
-        "imagem": "",
-        "musculo_principal": [
-            "Peitoral maior"
-        ],
-        "musculo_secundario": [
-            "Deltoide anterior",
-            "Tríceps"
-        ],
-        "descricao": "Exercício fundamental para o desenvolvimento do peitoral, realizado em um banco plano com uma barra.",
-        "tutorial": [
-            "Deite-se no banco com os pés firmes no chão.",
-            "Segure a barra com as mãos um pouco além da largura dos ombros.",
-            "Abaixe a barra controladamente até tocar o meio do peito.",
-            "Empurre a barra de volta à posição inicial, estendendo os cotovelos."
-        ],
-        "exemplos": []
-    }])
+type Props = NativeStackScreenProps<TreinoStack, "Treino">
 
-    // preact?
-    const navigation = useNavigation<MainStackNavigationProp>()
+export default function Workout({ route, navigation }: Props) {
+    // Dados da página
+    const [metaData, setMetaData] = useState<treino>()
+    const [exercicios, setExercicios] = useState<exercicio_treino[]>()
+
+    // ID do Treino
+    const { id } = route.params
+
+    // Carrega metadados dos treinos armazenados localmente
+    const { treinos } = useWorkout()
+    useEffect(() => {
+        if (id) {
+            const meta = treinos.find(i => i.id === id)
+            setMetaData(meta)
+        }
+    }, [id, treinos])
+
+    // Header
+    useEffect(() => {
+        if (metaData) {
+            navigation.setOptions({ title: "Treino " + metaData?.label })
+        }
+    }, [metaData, navigation])
+
+    // TODO buscar exercicios do treino correspondente
+    useEffect(() => {
+        
+    }, [])
 
     return (
         <SafeAreaView>
-            {/* TODO lista de exercicios */}
-            <View>
-                {exercicios.map((i) => (
-                    <TouchableOpacity
-                        key={i.id}
-                        onPress={() => navigation.navigate("Exercicio", { id: i.id })}
-                    >
-                        <View >
-                            <Text>{i.nome}</Text>
-                            <Text>{i.descricao}</Text>
-                        </View>
-                    </TouchableOpacity>
-                ))}
-            </View>
+            <Button title="Novo exercicio" onPress={() => navigation.navigate("NovoExercicio", { id })} />
+
+            <TouchableOpacity onPress={() => navigation.navigate("EditarExercicio", { id: "1" })}>
+                <Text>Treino {metaData?.label}</Text>
+
+                <FlatList data={exercicios} renderItem={({ item }) => (
+                    <View key={item.id}>
+                        <Text>{item.id_exercicio}</Text>
+                        <Text>{item.series} Series</Text>
+                        <Text>{item.repeticoes} Repetições</Text>
+                    </View>
+                )} />
+            </TouchableOpacity>
         </SafeAreaView>
     )
 }
