@@ -1,16 +1,16 @@
-import { useNavigation } from "@react-navigation/native";
-import { Text, TouchableOpacity } from "react-native";
+import { Button, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { PerfilStackNavigationProp } from "../types/Navigation";
+import useAuth from "../hooks/useAuth";
 
 export default function Perfil() {
-    const navigation = useNavigation<PerfilStackNavigationProp>()
+    const { user, signOut } = useAuth()
 
     return (
         <SafeAreaView>
-            <TouchableOpacity onPress={() => navigation.navigate("Detalhes")}>
-                <Text>Pedro</Text>
-            </TouchableOpacity>
+            <Text>{user?.email}</Text>
+            <Text>{user?.id}</Text>
+
+            <Button title="Sair" onPress={signOut} />
         </SafeAreaView>
     )
 }

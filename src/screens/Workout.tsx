@@ -4,14 +4,14 @@ import { TreinoStack } from "../types/Navigation";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { useWorkout } from "../hooks/useWorkout";
 import { useEffect, useState } from "react";
-import { exercicio_treino, treino } from "../types/entities";
+import { ExercicioTreino, Treino } from "../types/entities";
 
 type Props = NativeStackScreenProps<TreinoStack, "Treino">
 
 export default function Workout({ route, navigation }: Props) {
     // Dados da página
-    const [metaData, setMetaData] = useState<treino>()
-    const [exercicios, setExercicios] = useState<exercicio_treino[]>()
+    const [metaData, setMetaData] = useState<Treino>()
+    const [exercicios, setExercicios] = useState<ExercicioTreino[]>()
 
     // ID do Treino
     const { id } = route.params

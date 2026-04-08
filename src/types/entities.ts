@@ -1,7 +1,7 @@
 import { Tables } from "../database.types"
 
-type treino = Tables<"treino">
-type exercicio = Tables<"exercicio">
-type exercicio_treino = Tables<"exercicio_treino">
+type Treino = Tables<"treino">
+type Exercicio = Tables<"exercicio">
+type ExercicioTreino = Tables<"exercicio_treino">
 
-export { treino, exercicio, exercicio_treino }
+export { Treino, Exercicio, ExercicioTreino }

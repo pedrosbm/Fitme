@@ -1,18 +1,18 @@
 import { createContext, PropsWithChildren, useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { treino } from "../types/entities";
+import { Treino } from "../types/entities";
 
 type Context = {
     day: number,
     status: "Não iniciado" | "Em progresso" | undefined,
-    treinos: treino[],
-    todayWorkout: treino
+    treinos: Treino[],
+    todayWorkout: Treino
 }
 
 const WorkoutContext = createContext<Context | null>(null)
 
 const WorkoutProvider = ({ children }: PropsWithChildren) => {
-    const [treinos, setTreinos] = useState<treino[]>([])
+    const [treinos, setTreinos] = useState<Treino[]>([])
     const [day, setDay] = useState<number>(0)
     // TODO Implementar atualização de status
     const [status, setStatus] = useState<"Não iniciado" | "Em progresso">("Não iniciado")

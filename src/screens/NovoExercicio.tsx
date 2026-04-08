@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { exercicio, exercicio_treino } from "../types/entities";
+import { Exercicio, ExercicioTreino } from "../types/entities";
 import { TreinoStack } from "../types/Navigation";
 import { supabase } from "../supabase";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
@@ -12,10 +12,10 @@ export default function NovoExercicio({ navigation, route }: Props) {
     const { id } = route.params
 
     // Exercicio selecionado
-    const [exercicio, setExercicio] = useState<exercicio_treino>()
+    const [exercicio, setExercicio] = useState<ExercicioTreino>()
 
     // Exercicios do sistema
-    const [exercicios, setExercicios] = useState<exercicio[]>()
+    const [exercicios, setExercicios] = useState<Exercicio[]>()
 
     // Query de exercicios do sistema
     useEffect(() => {
@@ -29,7 +29,7 @@ export default function NovoExercicio({ navigation, route }: Props) {
         fetch()
     }, [])
 
-    const add = (item: exercicio) => {
+    const add = (item: Exercicio) => {
         const { id: idExercicio } = item
 
     }   

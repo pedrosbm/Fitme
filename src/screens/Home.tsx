@@ -1,15 +1,13 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useWorkout } from "../hooks/useWorkout";
-import { useNavigation } from "@react-navigation/native";
-import { MainStackNavigationProp } from "../types/Navigation";
-import { useEffect, useState } from "react";
-import { treino } from "../types/entities";
+import { MainStack} from "../types/Navigation";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
-export default function Home() {
-    const { todayWorkout, status} = useWorkout()
+type Props = NativeStackScreenProps<MainStack, "Home">
 
-    const navigation = useNavigation<MainStackNavigationProp>()
+export default function Home({ navigation }: Props) {
+    const { todayWorkout, status } = useWorkout()
 
     return (
         <>
