@@ -8,7 +8,6 @@ export default function Perfil() {
     return (
         <SafeAreaView>
             <Text>{user?.email}</Text>
-            <Text>{user?.id}</Text>
 
             <Button title="Sair" onPress={signOut} />
         </SafeAreaView>

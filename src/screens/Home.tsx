@@ -7,7 +7,9 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 type Props = NativeStackScreenProps<MainStack, "Home">
 
 export default function Home({ navigation }: Props) {
-    const { todayWorkout, status } = useWorkout()
+    const { todayWorkout, status, setTreinos } = useWorkout()
+
+
 
     return (
         <>
@@ -20,6 +22,7 @@ export default function Home({ navigation }: Props) {
                         <View>
                             {/* Label + status do treino do dia */}
                             <Text>{todayWorkout.label}</Text>
+                            <Text>{todayWorkout.nome}</Text>
                             <Text>{status}</Text>
                         </View>
                     </TouchableOpacity>

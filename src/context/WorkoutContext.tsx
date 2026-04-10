@@ -1,12 +1,15 @@
-import { createContext, PropsWithChildren, useEffect, useState } from "react";
+import { createContext, Dispatch, PropsWithChildren, SetStateAction, useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Treino } from "../types/entities";
+import { supabase } from "../supabase";
+import { getTreinosMinimal } from "../queryes/treino";
 
 type Context = {
     day: number,
     status: "Não iniciado" | "Em progresso" | undefined,
     treinos: Treino[],
-    todayWorkout: Treino
+    todayWorkout: Treino,
+    setTreinos: Dispatch<SetStateAction<Treino[]>>
 }
 
 const WorkoutContext = createContext<Context | null>(null)
@@ -17,16 +20,22 @@ const WorkoutProvider = ({ children }: PropsWithChildren) => {
     // TODO Implementar atualização de status
     const [status, setStatus] = useState<"Não iniciado" | "Em progresso">("Não iniciado")
 
-    // TODO implementar busca de treino com client
     useEffect(() => {
-        const treinos = [{
-            id: "id",
-            label: "A",
-            nome: "pernocas",
-            user: "id"
-        }]
+        const fetchTreinos = async () => {
+            const { data: { user }, error } = await supabase.auth.getUser()
 
-        setTreinos(treinos)
+            if (error) throw error
+
+            if (user) {
+                const { data } = await getTreinosMinimal(user?.id)
+                if (data) {
+                    console.log(data)
+                    setTreinos(data)
+                }
+            }
+        }
+
+        fetchTreinos()
     }, [])
 
     // Busca o dia do usuário baseado no armazenamento local e na rotina de treinos
@@ -49,7 +58,8 @@ const WorkoutProvider = ({ children }: PropsWithChildren) => {
         day,
         status,
         treinos,
-        todayWorkout
+        todayWorkout,
+        setTreinos
     }
 
     return (

@@ -28,12 +28,13 @@ export default function UserWorkouts() {
 
             <Button title="Novo treino" onPress={() => setVisible(true)} />
 
+            {/* Modal de criação de treino */}
             {visible &&
-            <View style={{position: "absolute", backgroundColor: "red", alignSelf: "center"}}>
-                <Text>A</Text>
-                <Text>Não sei o que</Text>
-                <Button title="Fechar" onPress={() => setVisible(false)}/>
-            </View>
+                <View style={{ position: "absolute", backgroundColor: "red", alignSelf: "center" }}>
+                    <Text>A</Text>
+                    <Text>Não sei o que</Text>
+                    <Button title="Fechar" onPress={() => setVisible(false)} />
+                </View>
             }
         </SafeAreaView>
     )
