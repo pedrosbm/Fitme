@@ -1,8 +1,8 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 
-import Perfil from "../screens/Perfil"
+import Perfil from "../screens/perfil/Perfil"
 import { PerfilStack as Stack } from "../types/Navigation"
-import PerfilDetails from "../screens/PerfilDetails"
+import PerfilDetails from "../screens/perfil/PerfilDetails"
 
 export default function PerfilStack() {
 

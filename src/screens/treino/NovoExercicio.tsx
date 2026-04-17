@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Exercicio, ExercicioTreino } from "../types/entities";
-import { TreinoStack } from "../types/Navigation";
-import { supabase } from "../supabase";
+import { Exercicio, ExercicioTreino } from "../../types/entities";
+import { TreinoStack } from "../../types/Navigation";
+import { supabase } from "../../supabase";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 type Props = NativeStackScreenProps<TreinoStack, "NovoExercicio">

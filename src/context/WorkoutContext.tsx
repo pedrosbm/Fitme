@@ -2,7 +2,6 @@ import { createContext, Dispatch, PropsWithChildren, SetStateAction, useEffect, 
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Treino } from "../types/entities";
 import { supabase } from "../supabase";
-import { getTreinosMinimal } from "../queryes/treino";
 
 type Context = {
     day: number,
@@ -27,14 +26,16 @@ const WorkoutProvider = ({ children }: PropsWithChildren) => {
             if (error) throw error
 
             if (user) {
-                const { data } = await getTreinosMinimal(user?.id)
+                const { data } = await supabase
+                    .from("treino")
+                    .select("*")
+                    .eq("user", user.id)
+
                 if (data) {
-                    console.log(data)
                     setTreinos(data)
                 }
             }
         }
-
         fetchTreinos()
     }, [])
 

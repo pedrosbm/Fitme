@@ -1,11 +1,11 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 
 import { TreinoStack as Stack } from "../types/Navigation"
-import ExercicioEdit from "../screens/ExercicioEdit"
-import NovoExercicio from "../screens/NovoExercicio"
+import ExercicioEdit from "../screens/treino/ExercicioEdit"
+import NovoExercicio from "../screens/treino/NovoExercicio"
 
-import Workout from "../screens/Workout"
-import UserWorkouts from "../screens/UserWorkouts"
+import Workout from "../screens/treino/Workout"
+import UserWorkouts from "../screens/treino/UserWorkouts"
 
 export default function TreinoStack() {
 

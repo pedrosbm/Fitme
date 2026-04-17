@@ -1,15 +1,15 @@
 import { SafeAreaView } from "react-native-safe-area-context"
-import { useWorkout } from "../hooks/useWorkout"
+import { useWorkout } from "../../hooks/useWorkout"
 import { Button, Text, TouchableOpacity, View } from "react-native"
-import { useNavigation } from "@react-navigation/native"
-import { TreinoStackNavigationProp } from "../types/Navigation"
+import { TreinoStack } from "../../types/Navigation"
 import { useState } from "react"
+import { NativeStackScreenProps } from "@react-navigation/native-stack"
 
-export default function UserWorkouts() {
+type Props = NativeStackScreenProps<TreinoStack, "Treinos">
+
+export default function UserWorkouts({ navigation }: Props) {
     const { treinos } = useWorkout()
     const [visible, setVisible] = useState<boolean>(false)
-
-    const navigation = useNavigation<TreinoStackNavigationProp>()
 
     return (
         <SafeAreaView>

@@ -1,15 +1,14 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useWorkout } from "../hooks/useWorkout";
-import { MainStack} from "../types/Navigation";
+import { useWorkout } from "../../hooks/useWorkout";
+import { MainStack } from "../../types/Navigation";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { useEffect } from "react";
 
 type Props = NativeStackScreenProps<MainStack, "Home">
 
 export default function Home({ navigation }: Props) {
-    const { todayWorkout, status, setTreinos } = useWorkout()
-
-
+    const { todayWorkout, status } = useWorkout()
 
     return (
         <>
@@ -18,7 +17,7 @@ export default function Home({ navigation }: Props) {
 
                 {/* TODO navegar para workout real */}
                 {todayWorkout !== undefined && (
-                    <TouchableOpacity onPress={() => navigation.navigate("Workout", { id: "1" })}>
+                    <TouchableOpacity onPress={() => navigation.navigate("Workout", { id: todayWorkout.id })}>
                         <View>
                             {/* Label + status do treino do dia */}
                             <Text>{todayWorkout.label}</Text>

@@ -1,8 +1,8 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { MainStack as Stack } from "../types/Navigation"
-import Home from "../screens/Home"
-import Workout from "../screens/Workout"
-import Exercicio from "../screens/Exercicio"
+import Home from "../screens/home/Home"
+import Exercicio from "../screens/home/Exercicio"
+import TrackWorkout from "../screens/home/TrackWorkout"
 
 export default function MainStack() {
     const Stack = createNativeStackNavigator<Stack>()
@@ -10,7 +10,7 @@ export default function MainStack() {
     return (
         <Stack.Navigator initialRouteName="Home">
             <Stack.Screen name="Home" component={Home}/>
-            <Stack.Screen name="Workout" component={Workout}/>
+            <Stack.Screen name="Workout" component={TrackWorkout}/>
             <Stack.Screen name="Exercicio" component={Exercicio} />
         </Stack.Navigator>
     )
