@@ -63,21 +63,21 @@ export default function Workout({ route, navigation }: Props) {
         }
         getExercicios()
 
-    }, [query])
+    }, [])
 
     return (
         <SafeAreaView>
             <Button title="Novo exercicio" onPress={() => navigation.navigate("NovoExercicio", { id: idTreino })} />
 
-            <TouchableOpacity onPress={() => navigation.navigate("EditarExercicio", { id: "1" })}>
-                <Text>Treino {metaData?.label}</Text>
+            <Text>Treino {metaData?.label}</Text>
 
-                <FlatList ListEmptyComponent={<Text>Vazio</Text>} data={exercicios} renderItem={({ item }) => (
+            <FlatList ListEmptyComponent={<Text>Vazio</Text>} data={exercicios} renderItem={({ item }) => (
+                <TouchableOpacity onPress={() => navigation.navigate("EditarExercicio", { id: item.id })}>
                     <View key={item.id}>
                         <Text>{item.id_exercicio.nome}</Text>
                     </View>
-                )} />
-            </TouchableOpacity>
+                </TouchableOpacity>
+            )} />
         </SafeAreaView>
     )
 }

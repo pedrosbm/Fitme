@@ -15,7 +15,6 @@ export default function Home({ navigation }: Props) {
             <SafeAreaView>
                 <Text>Olá Pedro</Text>
 
-                {/* TODO navegar para workout real */}
                 {todayWorkout !== undefined && (
                     <TouchableOpacity onPress={() => navigation.navigate("Workout", { id: todayWorkout.id })}>
                         <View>
