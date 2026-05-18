@@ -1,4 +1,4 @@
-import { FlatList, View, Text, Button } from "react-native"
+import { FlatList, View, Text, Button, TouchableOpacity } from "react-native"
 import { useWorkout } from "../../hooks/useWorkout"
 import { useEffect, useState } from "react"
 import { supabase } from "../../supabase"
@@ -45,13 +45,15 @@ export default function TrackWorkout({ navigation }: Props) {
     return (
         <View>
             <FlatList data={exercicios} renderItem={({ item }) => (
-                <View key={item.id}>
-                    <Text>{item.id_exercicio.nome}</Text>
-                    <View style={{ flexDirection: "row", gap: 5, width: "100%" }}>
-                        <Text>{item.series}</Text>
-                        <Text>{item.repeticoes}</Text>
+                <TouchableOpacity onPress={() => navigation.navigate("Exercicio", { id: item.id })}>
+                    <View key={item.id}>
+                        <Text>{item.id_exercicio.nome}</Text>
+                        <View style={{ flexDirection: "row", gap: 5, width: "100%" }}>
+                            <Text>{item.series}</Text>
+                            <Text>{item.repeticoes}</Text>
+                        </View>
                     </View>
-                </View>
+                </TouchableOpacity>
             )} />
 
             {/* TODO passar para o próximo dia(se existir)*/}
