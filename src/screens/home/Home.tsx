@@ -8,7 +8,7 @@ import { useEffect } from "react";
 type Props = NativeStackScreenProps<MainStack, "Home">
 
 export default function Home({ navigation }: Props) {
-    const { todayWorkout, status } = useWorkout()
+    const { todayWorkout, inProgress } = useWorkout()
 
     return (
         <>
@@ -21,7 +21,7 @@ export default function Home({ navigation }: Props) {
                             {/* Label + status do treino do dia */}
                             <Text>{todayWorkout.label}</Text>
                             <Text>{todayWorkout.nome}</Text>
-                            <Text>{status}</Text>
+                            <Text>{inProgress ? "Em Progresso" : "Não iniciado"}</Text>
                         </View>
                     </TouchableOpacity>
                 )}

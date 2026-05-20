@@ -4,4 +4,8 @@ type Treino = Tables<"treino">
 type Exercicio = Tables<"exercicio">
 type ExercicioTreino = Tables<"exercicio_treino">
 
-export { Treino, Exercicio, ExercicioTreino }
+type ExercicioTreinoWithExercicio = ExercicioTreino & {
+    id_exercicio: Exercicio | null
+}
+
+export { Treino, Exercicio, ExercicioTreino, ExercicioTreinoWithExercicio }

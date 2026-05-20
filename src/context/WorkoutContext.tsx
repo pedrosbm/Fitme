@@ -5,10 +5,14 @@ import { supabase } from "../supabase";
 
 type Context = {
     day: number,
-    status: "Não iniciado" | "Em progresso" | undefined,
+    // TODO: Adicionar setDay para permitir trocar o dia de treino
+    inProgress: boolean,
+    setInProgress: Dispatch<SetStateAction<boolean>>
     treinos: Treino[],
+    // TODO: Tipificar como Treino | undefined (pode ser undefined quando treinos está vazio)
     todayWorkout: Treino,
     setTreinos: Dispatch<SetStateAction<Treino[]>>
+    // TODO: Adicionar error state para melhor error handling
 }
 
 const WorkoutContext = createContext<Context | null>(null)
@@ -16,8 +20,7 @@ const WorkoutContext = createContext<Context | null>(null)
 const WorkoutProvider = ({ children }: PropsWithChildren) => {
     const [treinos, setTreinos] = useState<Treino[]>([])
     const [day, setDay] = useState<number>(0)
-    // TODO Implementar atualização de status
-    const [status, setStatus] = useState<"Não iniciado" | "Em progresso">("Não iniciado")
+    const [inProgress, setInProgress] = useState<boolean>(false)
 
     useEffect(() => {
         const fetchTreinos = async () => {
@@ -36,6 +39,7 @@ const WorkoutProvider = ({ children }: PropsWithChildren) => {
                 }
             }
         }
+        // TODO: Adicionar try/catch para melhor error handling (setError state)
         fetchTreinos()
     }, [])
 
@@ -53,14 +57,21 @@ const WorkoutProvider = ({ children }: PropsWithChildren) => {
         })
     }, [treinos])
 
+    useEffect(() => {
+        AsyncStorage.setItem("day", day.toString())
+    }, [day])
+
     const todayWorkout = treinos[day]
+
+    // TODO: Migrar para TanStack Query + Supabase cache helpers para otimizar fetches
 
     const value: Context = {
         day,
-        status,
+        inProgress,
+        setInProgress,
         treinos,
-        todayWorkout,
-        setTreinos
+        setTreinos,
+        todayWorkout
     }
 
     return (
