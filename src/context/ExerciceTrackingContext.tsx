@@ -1,4 +1,4 @@
-import { createContext, Dispatch, PropsWithChildren, SetStateAction, useEffect, useState } from "react";
+import { createContext, PropsWithChildren, useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { StoredExerciseData } from "../types/StoredExerciseData";
 
@@ -15,6 +15,7 @@ type ExerciceTrackingContextType = {
     getCompletedCount: () => number;
     getTodayStats: (totalExercises: number) => { completed: number; total: number };
     clearExpiredData: () => Promise<void>;
+    clearAllExercices: () => Promise<void>
 };
 
 const ExerciceTrackingContext = createContext<ExerciceTrackingContextType | null>(null);
@@ -156,6 +157,19 @@ const ExerciceTrackingProvider = ({ children }: PropsWithChildren) => {
         }
     };
 
+    const clearAllExercices = async () => {
+        // Limpar as chaves de exercício do AsyncStorage
+        try {
+            const keys = await AsyncStorage.getAllKeys()
+            const exerciseKeys = keys.filter(key => key.startsWith("exercise_"))
+            if (exerciseKeys.length > 0) {
+                await AsyncStorage.multiRemove(exerciseKeys)
+            }
+        } catch (error) {
+            console.error('Error clearing exercise data from AsyncStorage:', error)
+        }
+    }
+
     // TODO: Adicionar método para sincronizar com backend/database quando online
 
     const loadAllExercises = async () => {
@@ -193,6 +207,7 @@ const ExerciceTrackingProvider = ({ children }: PropsWithChildren) => {
         getCompletedCount,
         getTodayStats,
         clearExpiredData,
+        clearAllExercices
     };
 
     return (

@@ -12,7 +12,7 @@ export default function ExerciceList() {
     const { todayWorkout } = useWorkout()
 
     useEffect(() => {
-        const getExercicies = async () => {
+        const getExercices = async (id_treino: string) => {
             const { data, error } = await supabase
                 .from("exercicio_treino")
                 .select(`
@@ -22,21 +22,23 @@ export default function ExerciceList() {
                             imagem
                         )
                         `)
-                .eq("id_treino", todayWorkout.id)
+                .eq("id_treino", id_treino)
 
             if (error) throw error
             setExercicios(data as ExercicioTreinoWithExercicio[])
             setLoading(false)
         }
 
-        if (todayWorkout?.id) {
-            getExercicies()
+        const id = todayWorkout?.id
+        if (id) {
+            getExercices(id)
         }
-    }, [todayWorkout?.id])
+    }, [])
 
     return (
         <FlatList
             data={exercicios}
+            // ListEmptyComponent={}
             renderItem={({ item }) => <Exercice item={item} />}
             keyExtractor={(item) => item.id.toString()}
             onEndReachedThreshold={0.1}

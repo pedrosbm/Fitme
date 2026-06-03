@@ -8,7 +8,6 @@ import { QueryData } from "@supabase/supabase-js";
 
 type Props = NativeStackScreenProps<MainStack, "Exercicio">
 
-// TODO Resolver problema de disputa de nomes das tipagens e telas/ melhorar nomenclaturas 
 export default function Exercicio({ route }: Props) {
     const [data, setData] = useState<Data>()
 
@@ -52,7 +51,7 @@ export default function Exercicio({ route }: Props) {
                         <Text>{data?.id_exercicio.nome}</Text>
                     </View>
 
-                    <View>
+                    <View style={{ flexDirection: "row", gap: 5 }}>
                         <Text>{data?.series} series</Text>
                         <Text>{data?.repeticoes} repeticoes</Text>
                     </View>
@@ -60,21 +59,18 @@ export default function Exercicio({ route }: Props) {
 
                 {/* Musculos */}
                 <View>
-                    <View>
+                    <View style={{ flexDirection: "row", gap: 5 }}>
                         {data?.id_exercicio.musculo_principal.map((item) => (
                             <Text key={item}>{item}</Text>
                         ))}
-                    </View>
-
-                    <View>
                         {data?.id_exercicio.musculo_secundario.map((item) => (
                             <Text key={item}>{item}</Text>
                         ))}
                     </View>
                 </View>
 
-                {/* TODO cronômetro que funciona em segundo plano */}
-                <Button title={String(data?.descanso)} />
+                {/* TODO 2 cronômetro que funciona em segundo plano */}
+                <Button title={String(data?.descanso)} onPress={() => console.log(`Descanço de ${data?.descanso} segundos`)} />
             </View>
         </SafeAreaView>
     )

@@ -5,14 +5,12 @@ import { supabase } from "../supabase";
 
 type Context = {
     day: number,
-    // TODO: Adicionar setDay para permitir trocar o dia de treino
+    setDay: Dispatch<SetStateAction<number>>
     inProgress: boolean,
     setInProgress: Dispatch<SetStateAction<boolean>>
     treinos: Treino[],
-    // TODO: Tipificar como Treino | undefined (pode ser undefined quando treinos está vazio)
-    todayWorkout: Treino,
+    todayWorkout: Treino | undefined,
     setTreinos: Dispatch<SetStateAction<Treino[]>>
-    // TODO: Adicionar error state para melhor error handling
 }
 
 const WorkoutContext = createContext<Context | null>(null)
@@ -67,6 +65,7 @@ const WorkoutProvider = ({ children }: PropsWithChildren) => {
 
     const value: Context = {
         day,
+        setDay,
         inProgress,
         setInProgress,
         treinos,
